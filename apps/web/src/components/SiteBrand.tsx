@@ -41,7 +41,7 @@ type BrandData = Pick<
 
 const DEFAULT_BRANDING: BrandData = {
   site_base_url: "",
-  site_name: "StarAI",
+  site_name: "雾讯 AI",
   site_logo: "",
   site_favicon: "",
   site_description: "AI 大模型聚合平台",
@@ -110,7 +110,7 @@ export function SiteBrand({
 }) {
   const { ts } = useI18n();
   const { site_name, site_logo, site_description } = useSiteBranding();
-  const siteName = site_name || DEFAULT_BRANDING.site_name || "StarAI";
+  const siteName = site_name || DEFAULT_BRANDING.site_name || "雾讯 AI";
   const siteSubtitle = ts(subtitle ?? site_description ?? "");
 
   return (

@@ -1415,7 +1415,7 @@ func defaultAPIDocRequestExample(doc *APIDocDTO) map[string]interface{} {
 		}
 		return example
 	case "audio":
-		text := "欢迎使用 StarAI 开放平台。"
+		text := "欢迎使用雾讯 AI 开放平台。"
 		if strings.Contains(strings.ToLower(doc.NewAPIModel), "fun-music") {
 			text = "夏日清新民谣，木吉他与口琴伴奏，轻快节奏"
 		}

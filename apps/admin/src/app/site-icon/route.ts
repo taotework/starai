@@ -19,7 +19,7 @@ export async function GET() {
       const cfg = json?.data || {};
       const favicon = String(cfg.site_favicon || cfg.site_logo || "").trim();
       if (favicon) return NextResponse.redirect(favicon);
-      return new NextResponse(svgFallback(cfg.site_name || "StarAI"), {
+      return new NextResponse(svgFallback(cfg.site_name || "雾讯 AI"), {
         headers: {
           "Content-Type": "image/svg+xml; charset=utf-8",
           "Cache-Control": "public, max-age=300",
@@ -29,7 +29,7 @@ export async function GET() {
   } catch {
     /* fallback below */
   }
-  return new NextResponse(svgFallback("StarAI"), {
+  return new NextResponse(svgFallback("雾讯 AI"), {
     headers: {
       "Content-Type": "image/svg+xml; charset=utf-8",
       "Cache-Control": "public, max-age=300",

@@ -17,7 +17,7 @@ export async function GET() {
   if (favicon) {
     return NextResponse.redirect(favicon);
   }
-  return new NextResponse(svgFallback(cfg.site_name || "StarAI"), {
+  return new NextResponse(svgFallback(cfg.site_name || "雾讯 AI"), {
     headers: {
       "Content-Type": "image/svg+xml; charset=utf-8",
       "Cache-Control": "public, max-age=300",

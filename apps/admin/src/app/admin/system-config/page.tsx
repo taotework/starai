@@ -62,7 +62,7 @@ const BASE_ITEMS: ConfigItem[] = [
   ], hint: "先保存并验证渠道参数，最后再开启在线支付。" },
   { key: "payment_currency", label: "收款币种", type: "text", hint: "三位 ISO 币种代码，例如 USD、EUR、JPY。必须与支付商账户支持的币种一致。" },
   { key: "payment_compute_rate", label: "默认算力兑换倍率", type: "number", hint: "未在套餐中指定到账算力时使用：支付金额 × 此倍率。1 算力≈1元人民币时，USD 可设置约 7.2；更换收款币种后请同步调整。" },
-  { key: "payment_product_name", label: "支付商品名称", type: "text", hint: "显示在 Stripe / PayPal 收银台，例如 StarAI Credits。" },
+  { key: "payment_product_name", label: "支付商品名称", type: "text", hint: "显示在 Stripe / PayPal 收银台，例如 雾讯 AI Credits。" },
   { key: "payment_success_url", label: "支付成功返回地址", type: "text", hint: "必须是完整 http(s) 地址，可使用 {order_no}，例如 https://example.com/app/wallet?payment=success&order={order_no}" },
   { key: "payment_cancel_url", label: "取消支付返回地址", type: "text", hint: "必须是完整 http(s) 地址，例如 https://example.com/app/wallet?payment=cancel" },
   { key: "payment_checkout_url_template", label: "收银台 URL 模板", type: "text", hint: "必须包含 {order_no}，可选使用 {amount}，例如 https://pay.example.com/checkout?order={order_no}&amount={amount}" },
@@ -1162,7 +1162,7 @@ export default function SystemConfigPage() {
                       )}
                     </div>
                     <div className="min-w-0">
-                      <div className="truncate font-semibold text-gray-950">{String(configs.site_name || "StarAI")}</div>
+                      <div className="truncate font-semibold text-gray-950">{String(configs.site_name || "雾讯 AI")}</div>
                       <div className="truncate text-sm text-gray-500">{String(configs.site_description || "AI 大模型聚合平台")}</div>
                     </div>
                   </div>
@@ -1180,7 +1180,7 @@ export default function SystemConfigPage() {
                       )}
                     </div>
                     <div className="min-w-0">
-                      <div className="truncate font-semibold text-gray-950">{String(configs.site_name || "StarAI")} Admin</div>
+                      <div className="truncate font-semibold text-gray-950">{String(configs.site_name || "雾讯 AI")} Admin</div>
                       <div className="truncate text-sm text-gray-500">{String(configs.admin_site_description || "管理后台")}</div>
                     </div>
                   </div>
@@ -1198,7 +1198,7 @@ export default function SystemConfigPage() {
                       )}
                     </div>
                     <div className="min-w-0">
-                      <div className="truncate font-semibold text-gray-950">{String(configs.site_name || "StarAI")}</div>
+                      <div className="truncate font-semibold text-gray-950">{String(configs.site_name || "雾讯 AI")}</div>
                       <div className="truncate text-sm text-gray-500">{String(configs.site_api_tagline || "Open API Documentation")}</div>
                     </div>
                   </div>
@@ -1282,7 +1282,7 @@ export default function SystemConfigPage() {
             <div className="space-y-5">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {renderItem({ key: "customer_service_title", label: "弹窗标题", type: "text", hint: "例如：联系客服。" })}
-                {renderItem({ key: "customer_service_name", label: "客服名称", type: "text", hint: "例如：乌苏、StarAI 客服。" })}
+                {renderItem({ key: "customer_service_name", label: "客服名称", type: "text", hint: "例如：乌苏、雾讯 AI 客服。" })}
                 {renderItem({ key: "customer_service_subtitle", label: "弹窗副标题", type: "text", hint: "例如：我们随时为您服务。" })}
                 {renderItem({ key: "customer_service_qr_tip", label: "二维码提示语", type: "text", hint: "显示在二维码下方。" })}
                 {renderItem({ key: "customer_service_phone", label: "手机号", type: "text" })}
@@ -1559,7 +1559,7 @@ export default function SystemConfigPage() {
             {emailProvider === "resend" ? (
               <>
                 {renderItem({ key: "resend_api_key", label: "Resend API Key", type: "password", hint: "在 Resend 后台 API Keys 中创建，通常以 re_ 开头。" })}
-                {renderItem({ key: "resend_from", label: "Resend 发件人", type: "text", hint: "例如 StarAI <noreply@yourdomain.com>，域名必须已在 Resend 验证。" })}
+                {renderItem({ key: "resend_from", label: "Resend 发件人", type: "text", hint: "例如 雾讯 AI <noreply@yourdomain.com>，域名必须已在 Resend 验证。" })}
               </>
             ) : (
               <>

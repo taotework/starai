@@ -1,9 +1,7 @@
 export const REFERENCE_REPOSITORY_URL = "https://github.com/freestylefly/awesome-gpt-image-2";
-export const REFERENCE_MANIFEST_URL =
-  "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/main/data/cases.json";
+export const REFERENCE_MANIFEST_URL = "/assets/reference-gallery/cases.json";
 
-const REFERENCE_RAW_ROOT =
-  "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/main/data";
+const REFERENCE_RAW_ROOT = "/assets/reference-gallery";
 const REFERENCE_CACHE_KEY = "starai:reference-gallery:v1";
 const REFERENCE_CACHE_TTL = 24 * 60 * 60 * 1000;
 

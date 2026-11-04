@@ -8,6 +8,7 @@ COPY . .
 RUN CGO_ENABLED=0 go build -p=2 -o /worker ./cmd/worker
 
 FROM alpine:3.20
-RUN apk add --no-cache ca-certificates ffmpeg font-noto-cjk
+RUN sed -i 's|dl-cdn.alpinelinux.org|mirrors.aliyun.com|g' /etc/apk/repositories \
+    && apk add --no-cache ca-certificates ffmpeg font-noto-cjk
 COPY --from=builder /worker /worker
 CMD ["/worker"]

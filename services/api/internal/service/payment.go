@@ -352,13 +352,13 @@ func (s *PaymentService) ProviderConfig(ctx context.Context) (PaymentProviderCon
 		cfg.Currency = "USD"
 	}
 	if cfg.ProductName == "" {
-		cfg.ProductName = "StarAI Credits"
+		cfg.ProductName = "雾讯 AI Credits"
 	}
 	if cfg.PayPalMode == "" {
 		cfg.PayPalMode = "sandbox"
 	}
 	if cfg.PayPalBrandName == "" {
-		cfg.PayPalBrandName = "StarAI"
+		cfg.PayPalBrandName = "雾讯 AI"
 	}
 	if cfg.ExpireMinutes < 5 || cfg.ExpireMinutes > 1440 {
 		cfg.ExpireMinutes = 30

@@ -2350,7 +2350,7 @@ slot_evidence 为修改字段提供本轮用户原话的最短依据；依据支
 func creativeAgentPlannerPrompt(configValues map[string]interface{}) string {
 	brandName := strings.Join(strings.Fields(strings.TrimSpace(stringAny(configValues["site_name"]))), " ")
 	if brandName == "" {
-		brandName = "StarAI"
+		brandName = "雾讯 AI"
 	}
 	if chars := []rune(brandName); len(chars) > 80 {
 		brandName = string(chars[:80])

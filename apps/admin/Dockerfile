@@ -2,7 +2,9 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_OPTIONS=--max-old-space-size=1536
+ENV COREPACK_NPM_REGISTRY=https://registry.npmmirror.com
 
+RUN npm config set registry https://registry.npmmirror.com
 RUN corepack enable
 RUN corepack prepare pnpm@11.7.0 --activate
 

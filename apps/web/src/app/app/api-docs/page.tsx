@@ -46,7 +46,7 @@ interface Operation extends OperationVariant {
   variants?: OperationVariant[];
 }
 
-const DEFAULT_BASE_URL = "https://api.your-starai-domain.com";
+const DEFAULT_BASE_URL = "https://start.ai.wuxun.cloud";
 
 const GROUPS = [
   { id: "chat", label: "聊天与文本" },
@@ -124,7 +124,7 @@ function responseExample(operation: OperationVariant, content: Record<string, an
   if (operation.id === "listModels") {
     return {
       object: "list",
-      data: [{ id: "model-code", object: "model", owned_by: "starai" }],
+      data: [{ id: "model-code", object: "model", owned_by: "wuxun" }],
     };
   }
   if (operation.id === "getTask") {

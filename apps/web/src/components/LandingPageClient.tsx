@@ -717,7 +717,7 @@ export default function LandingPageClient() {
   const branding = useSiteBranding();
   const { site_name, site_copyright, api_docs_enabled, api_docs_operations } = branding;
   const apiDocsVisible = api_docs_enabled !== false && (!api_docs_operations || Object.keys(api_docs_operations).length === 0 || Object.values(api_docs_operations).some((value) => value !== false));
-  const copyrightText = site_copyright || `© ${new Date().getFullYear()} ${site_name || "StarAI"}. All rights reserved.`;
+  const copyrightText = site_copyright || `© ${new Date().getFullYear()} ${site_name || "雾讯 AI"}. All rights reserved.`;
 
   useEffect(() => {
     hydrate();
@@ -885,7 +885,7 @@ export default function LandingPageClient() {
               </div>
               <AnimatedHeadline />
               <p className="mt-7 max-w-full break-words text-base leading-8 text-white/62 sm:max-w-2xl sm:text-lg">
-                {t("landing.desc", { site: site_name || "StarAI" })}
+                {t("landing.desc", { site: site_name || "雾讯 AI" })}
               </p>
               <div className="mt-10 flex min-w-0 flex-col gap-3 sm:flex-row">
                 <button onClick={enterAppOrLogin} onPointerEnter={prepareEntry} onFocus={prepareEntry} className="group box-border inline-flex w-full min-w-0 max-w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-primary px-5 py-3.5 text-sm font-semibold text-dark transition hover:bg-primary/90 sm:w-auto sm:px-7 sm:text-base">
@@ -1077,7 +1077,7 @@ export default function LandingPageClient() {
         <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between">
           <div className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-primary/70" />
-            <span>{site_name || "StarAI"}</span>
+            <span>{site_name || "雾讯 AI"}</span>
           </div>
           <div className="max-w-full break-words">{copyrightText}</div>
         </div>

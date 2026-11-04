@@ -3280,7 +3280,7 @@ function MediaResultCard({
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                void downloadResultImage(url, `StarAI-图片-${index + 1}`).catch(() => window.open(url, "_blank", "noopener"));
+                void downloadResultImage(url, `雾讯AI-图片-${index + 1}`).catch(() => window.open(url, "_blank", "noopener"));
               }}
             >
               <Download size={15} />
